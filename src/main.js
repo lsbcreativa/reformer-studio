@@ -212,9 +212,14 @@ function toggleTheme(e) {
   const end = Math.hypot(Math.max(x, window.innerWidth - x), Math.max(y, window.innerHeight - y));
   const vt = document.startViewTransition(() => applyTheme(next));
   vt.ready.then(() => {
+    // Reveal circular suave + fundido del tema anterior → transición fluida (no robótica)
     root.animate(
       { clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${end}px at ${x}px ${y}px)`] },
-      { duration: 600, easing: 'cubic-bezier(.22,.61,.36,1)', pseudoElement: '::view-transition-new(root)' }
+      { duration: 760, easing: 'cubic-bezier(.45,.05,.2,1)', pseudoElement: '::view-transition-new(root)' }
+    );
+    root.animate(
+      { opacity: [1, 0] },
+      { duration: 560, easing: 'ease-out', pseudoElement: '::view-transition-old(root)' }
     );
   });
 }

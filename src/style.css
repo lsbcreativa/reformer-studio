@@ -367,8 +367,8 @@ body.menu-open .overlay { transform: translateY(0); }
 [data-theme="light"] .theme-toggle .sun { display: none; }
 [data-theme="light"] .theme-toggle .moon { display: block; }
 
-body { transition: background-color .45s ease, color .45s ease; }
-html.theming, html.theming * { transition: background-color .45s ease, color .45s ease, border-color .45s ease, fill .45s ease !important; }
+body { transition: background-color .6s ease, color .6s ease; }
+html.theming, html.theming * { transition: background-color .6s ease, color .6s ease, border-color .6s ease, fill .6s ease !important; }
 
 /* Reveal circular del cambio de tema (View Transitions API) */
 ::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
