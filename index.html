@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Funcional Studio — Pilates Reformer & Barre en Lima | Miraflores · Surco</title>
+  <meta name="description" content="Estudio boutique de Pilates Reformer, Barre, Step Chair, Suspensión y Stretching en Miraflores y Surco. Grupos reducidos, instructoras certificadas. Entrena con intención." />
+  <link rel="canonical" href="https://www.funcionalstudio.pe/" />
+  <link rel="icon" href="logo.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Funcional Studio — Pilates Reformer & Barre en Lima" />
+  <meta property="og:description" content="Entrena con intención. Pilates Reformer, Barre y más en Miraflores y Surco." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script>(function(){try{var t=localStorage.getItem('fs-theme')||'dark';document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
+  <style id="critical-css">
+    /* CSS crítico inline: primer píxel ya estilizado (sin flash), con soporte de tema */
+    html,body{margin:0;background:#060607}
+    body{color:#F5F2EC;font-family:"Archivo",system-ui,-apple-system,sans-serif}
+    .loader{position:fixed;inset:0;z-index:9999;background:#060607;display:grid;place-items:center}
+    .loader__inner{text-align:center}
+    .loader__logo{width:78px;height:auto;margin:0 auto 1.4rem;display:block;filter:invert(1);opacity:.9}
+    .loader__bar{width:180px;height:2px;background:rgba(255,255,255,.15);overflow:hidden;margin:0 auto}
+    .loader__bar span{display:block;height:100%;width:0;background:#F5F2EC}
+    .loader__pct{margin-top:.9rem;font-size:.75rem;letter-spacing:.3em;color:#9A968E}
+    html[data-theme="light"],html[data-theme="light"] body{background:#FBF4ED}
+    html[data-theme="light"] body{color:#221E28}
+    html[data-theme="light"] .loader{background:#FBF4ED}
+    html[data-theme="light"] .loader__logo{filter:none}
+    html[data-theme="light"] .loader__bar{background:rgba(0,0,0,.12)}
+    html[data-theme="light"] .loader__bar span{background:#221E28}
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@1,500;1,600;1,700&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HealthClub","name":"Funcional Studio","url":"https://www.funcionalstudio.pe","telephone":"+51981835198","sameAs":["https://www.instagram.com/funcionalstudio.peru","https://www.facebook.com/funcionalstudio.peru"],"location":[{"@type":"Place","name":"Miraflores","address":{"@type":"PostalAddress","streetAddress":"Av. Pardo 601 of. 704","addressLocality":"Miraflores","addressRegion":"Lima","addressCountry":"PE"}},{"@type":"Place","name":"Surco","address":{"@type":"PostalAddress","streetAddress":"C.C. La Alborada, Av. Alameda del Arco Iris 118, Piso 3","addressLocality":"Surco","addressRegion":"Lima","addressCountry":"PE"}}]}
+  </script>
+</head>
+<body class="lock">
+
+  <!-- PRELOADER -->
+  <div class="loader">
+    <div class="loader__inner">
+      <img class="loader__logo" src="logo.png" alt="Funcional Studio" />
+      <div class="loader__bar"><span></span></div>
+      <div class="loader__pct">000</div>
+    </div>
+  </div>
+
+  <!-- 3D + textura -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="grain"></div>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="brand"><img src="logo.png" alt="Funcional Studio" /></a>
+      <nav class="nav__links">
+        <a href="#disciplinas">Disciplinas</a>
+        <a href="#sedes">Sedes</a>
+        <a href="#precios">Precios</a>
+        <a href="#metodo">Método</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav__right">
+        <a href="https://wa.me/51981835198?text=Hola!%20Quiero%20reservar%20mi%20primera%20clase" target="_blank" rel="noopener" class="btn btn--fill" data-magnetic><span>Reservar</span></a>
+        <button class="theme-toggle" aria-label="Cambiar tema claro/oscuro" title="Tema claro / oscuro">
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.4 1.4M17.6 17.6L19 19M19 5l-1.4 1.4M6.4 17.6L5 19" stroke-linecap="round"/></svg>
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z"/></svg>
+        </button>
+        <button class="burger" aria-label="Menú" aria-expanded="false"><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- OVERLAY MENU -->
+  <div class="overlay">
+    <div class="container">
+      <a href="#disciplinas">Disciplinas</a>
+      <a href="#sedes">Sedes</a>
+      <a href="#precios">Precios</a>
+      <a href="#metodo">Método</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://wa.me/51981835198" class="sub" target="_blank" rel="noopener">Reservar por WhatsApp ↗</a>
+      <div class="overlay__foot">
+        <span>Miraflores — Av. Pardo 601</span>
+        <span>Surco — C.C. La Alborada</span>
+        <span>@funcionalstudio.peru</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <span class="eyebrow">Pilates boutique · Miraflores &amp; Surco</span>
+        <h1 class="hero__title">
+          <span class="line"><span>Entrena</span></span>
+          <span class="line"><span class="outline-text">con</span></span>
+          <span class="line"><span>intención</span></span>
+        </h1>
+        <p class="hero__sub lead">Pilates Reformer, Barre y disciplinas funcionales en grupos reducidos. Instructoras que miran cada repetición.</p>
+        <div class="btn-row">
+          <a href="https://wa.me/51981835198?text=Quiero%20mi%20primera%20clase" target="_blank" rel="noopener" class="btn btn--fill btn--lg" data-magnetic><span>Primera clase · S/35</span></a>
+          <a href="#disciplinas" class="btn btn--out btn--lg"><span>Ver disciplinas</span></a>
+        </div>
+      </div>
+    </div>
+    <a class="hero__scroll" href="#disciplinas" aria-label="Bajar">
+      <span>Scroll</span>
+    </a>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>REFORMER</span><span class="ghost">BARRE</span><span>STEP CHAIR</span><span class="ghost">SUSPENSIÓN</span><span>STRETCHING</span><span class="ghost">FUERZA</span><span>POSTURA</span>
+      <span>REFORMER</span><span class="ghost">BARRE</span><span>STEP CHAIR</span><span class="ghost">SUSPENSIÓN</span><span>STRETCHING</span><span class="ghost">FUERZA</span><span>POSTURA</span>
+    </div>
+  </div>
+
+  <!-- DISCIPLINAS -->
+  <section class="section section--solid" id="disciplinas">
+    <div class="container">
+      <div class="shead">
+        <div>
+          <span class="eyebrow">Qué entrenas</span>
+          <h2 class="h-xl reveal" style="margin-top:1.2rem">Cinco formas<br>de moverte <span class="outline-text">mejor</span></h2>
+        </div>
+        <p class="lead reveal">Cada disciplina trabaja fuerza, control y movilidad. Combínalas en un plan y avanza más rápido.</p>
+      </div>
+
+      <div class="disc-wrap reveal">
+        <div class="disc-list">
+          <a class="disc-row" href="pilates-reformer.html">
+            <span class="disc-row__n">01</span>
+            <span class="disc-row__name">Pilates Reformer</span>
+            <span class="disc-row__desc">Tonifica, alinea y estiliza con la máquina más versátil.</span>
+          </a>
+          <a class="disc-row" href="barre.html">
+            <span class="disc-row__n">02</span>
+            <span class="disc-row__name">Barre</span>
+            <span class="disc-row__desc">Tono y postura con movimientos elegantes, sin impacto.</span>
+          </a>
+          <a class="disc-row" href="step-chair.html">
+            <span class="disc-row__n">03</span>
+            <span class="disc-row__name">Step Chair</span>
+            <span class="disc-row__desc">Consciencia corporal, equilibrio y fuerza profunda.</span>
+          </a>
+          <a class="disc-row" href="suspension-trx.html">
+            <span class="disc-row__n">04</span>
+            <span class="disc-row__name">Suspensión TRX</span>
+            <span class="disc-row__desc">Fuerza y estabilidad usando tu propio peso.</span>
+          </a>
+          <a class="disc-row" href="stretching.html">
+            <span class="disc-row__n">05</span>
+            <span class="disc-row__name">Stretching</span>
+            <span class="disc-row__desc">Flexibilidad y movilidad para una mejor postura.</span>
+          </a>
+        </div>
+        <div class="disc-preview" aria-hidden="true">
+          <div class="disc-preview__img active"><img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=700&q=80" alt="" /><span class="disc-preview__cap">Pilates Reformer</span></div>
+          <div class="disc-preview__img"><img src="https://images.unsplash.com/photo-1576858574144-9ae1ebcf5ae5?auto=format&fit=crop&w=700&q=80" alt="" /><span class="disc-preview__cap">Barre</span></div>
+          <div class="disc-preview__img"><img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?auto=format&fit=crop&w=700&q=80" alt="" /><span class="disc-preview__cap">Step Chair</span></div>
+          <div class="disc-preview__img"><img src="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?auto=format&fit=crop&w=700&q=80" alt="" /><span class="disc-preview__cap">Suspensión TRX</span></div>
+          <div class="disc-preview__img"><img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=700&q=80" alt="" /><span class="disc-preview__cap">Stretching</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MÉTODO -->
+  <section class="section section--solid" id="metodo">
+    <div class="container">
+      <div class="shead">
+        <div>
+          <span class="eyebrow">El método Funcional</span>
+          <h2 class="h-xl reveal" style="margin-top:1.2rem">No es solo ejercicio.<br>Es progreso <span class="outline-text">medible.</span></h2>
+        </div>
+        <p class="lead reveal">Cada sesión está diseñada para que sientas resultados reales: más fuerza, mejor postura, un cuerpo que responde.</p>
+      </div>
+      <div class="grid reveal" style="grid-template-columns:1fr 1fr;gap:0 4rem">
+        <div>
+          <div class="feat"><span class="feat__n">01</span><div><h4>Grupos reducidos (máx. 8)</h4><p>Tu instructora corrige cada repetición. Avanzas seguro y rápido.</p></div></div>
+          <div class="feat"><span class="feat__n">02</span><div><h4>Instructoras certificadas</h4><p>Formación real en Pilates, Barre y entrenamiento funcional.</p></div></div>
+        </div>
+        <div>
+          <div class="feat"><span class="feat__n">03</span><div><h4>Equipamiento premium</h4><p>Reformers, Step Chair y TRX en óptimo estado para tu seguridad.</p></div></div>
+          <div class="feat"><span class="feat__n">04</span><div><h4>Reserva flexible</h4><p>Mañana y tarde, dos sedes, reserva en segundos por WhatsApp o app.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEDES -->
+  <section class="section section--solid" id="sedes">
+    <div class="container">
+      <div class="shead">
+        <div><span class="eyebrow">Dónde entrenamos</span><h2 class="h-xl reveal" style="margin-top:1.2rem">Dos sedes,<br>misma <span class="outline-text">energía</span></h2></div>
+        <p class="lead reveal">Elige la que te queda más cerca. En ambas vives la experiencia Funcional completa.</p>
+      </div>
+      <div class="grid reveal" style="grid-template-columns:1fr 1fr">
+        <a class="sede" href="miraflores.html">
+          <div class="sede__bg"><img data-parallax src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=900&q=80" alt="Sede Miraflores" /></div>
+          <span class="eyebrow">Sede 01</span>
+          <h3>Miraflores</h3>
+          <p class="sede__addr"><b>Av. Pardo 601, of. 704</b>Lun–Vie 6:30–10:30 · Sáb 8:00–14:00 · (+51) 981 835 198</p>
+          <span class="btn btn--out"><span>Ver sede</span></span>
+        </a>
+        <a class="sede" href="surco.html">
+          <div class="sede__bg"><img data-parallax src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=900&q=80" alt="Sede Surco" /></div>
+          <span class="eyebrow">Sede 02</span>
+          <h3>Surco</h3>
+          <p class="sede__addr"><b>C.C. La Alborada · Piso 3</b>Av. Alameda del Arco Iris 118 · (+51) 993 630 152</p>
+          <span class="btn btn--out"><span>Ver sede</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTRUCTORAS -->
+  <section class="section section--solid" id="equipo">
+    <div class="container">
+      <div class="shead"><div><span class="eyebrow">El equipo</span><h2 class="h-xl reveal" style="margin-top:1.2rem">Instructoras<br>que te <span class="outline-text">conocen</span></h2></div><p class="lead reveal">Profesionales certificadas que adaptan cada clase a tu cuerpo y a tu objetivo.</p></div>
+      <div class="team reveal">
+        <div class="coach"><div class="coach__ph"><img data-parallax src="https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=500&q=80" alt="Instructora" /></div><h4>Valeria R.</h4><span>Pilates Reformer</span></div>
+        <div class="coach"><div class="coach__ph"><img data-parallax src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?auto=format&fit=crop&w=500&q=80" alt="Instructora" /></div><h4>Camila T.</h4><span>Barre & Stretching</span></div>
+        <div class="coach"><div class="coach__ph"><img data-parallax src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?auto=format&fit=crop&w=500&q=80" alt="Instructora" /></div><h4>Lucía M.</h4><span>Suspensión TRX</span></div>
+        <div class="coach"><div class="coach__ph"><img data-parallax src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=500&q=80" alt="Instructora" /></div><h4>Andrea P.</h4><span>Step Chair</span></div>
+      </div>
+      <p class="muted reveal" style="margin-top:1rem;font-size:.8rem">Imágenes referenciales — reemplazar con el equipo real.</p>
+    </div>
+  </section>
+
+  <!-- PRECIOS -->
+  <section class="section section--solid" id="precios">
+    <div class="container">
+      <div class="shead">
+        <div><span class="eyebrow">Inversión</span><h2 class="h-xl reveal" style="margin-top:1.2rem">Planes claros,<br>sin letra <span class="outline-text">chica</span></h2></div>
+        <p class="lead reveal">Mientras más clases, menos pagas por sesión. Válido para todas las disciplinas, en ambas sedes.</p>
+      </div>
+      <div class="grid reveal" style="grid-template-columns:repeat(3,1fr)">
+        <div class="price"><span class="price__tag">Primera clase</span><div class="price__amt">S/35</div><div class="price__per">prueba la experiencia</div><div class="price__meta">Vigencia 7 días</div><ul><li>Cualquier disciplina</li><li>Asesoría inicial</li></ul><a class="btn btn--out" href="https://wa.me/51981835198?text=Quiero%20mi%20primera%20clase" target="_blank" rel="noopener"><span>Empezar</span></a></div>
+        <div class="price"><span class="price__tag">Suelta</span><div class="price__amt">S/45</div><div class="price__per">1 clase</div><div class="price__meta">Vigencia 1 semana</div><ul><li>Flexible</li></ul><a class="btn btn--out" href="https://wa.me/51981835198" target="_blank" rel="noopener"><span>Comprar</span></a></div>
+        <div class="price"><span class="price__tag">Inicio</span><div class="price__amt">S/180</div><div class="price__per">4 clases · S/45 c/u</div><div class="price__meta">Vigencia 1 mes</div><ul><li>Para arrancar la rutina</li></ul><a class="btn btn--out" href="https://wa.me/51981835198" target="_blank" rel="noopener"><span>Comprar</span></a></div>
+        <div class="price price--feat"><span class="price__tag">★ Más popular</span><div class="price__amt">S/445</div><div class="price__per">10 clases · S/44.5 c/u</div><div class="price__meta">Vigencia 2 meses</div><ul><li>El favorito de las alumnas</li><li>2–3 clases por semana</li></ul><a class="btn btn--fill" href="https://wa.me/51981835198" target="_blank" rel="noopener"><span>Comprar</span></a></div>
+        <div class="price"><span class="price__tag">Constancia</span><div class="price__amt">S/840</div><div class="price__per">20 clases · S/42 c/u</div><div class="price__meta">Vigencia 4 meses</div><ul><li>Ahorro real</li></ul><a class="btn btn--out" href="https://wa.me/51981835198" target="_blank" rel="noopener"><span>Comprar</span></a></div>
+        <div class="price"><span class="price__tag">Compromiso</span><div class="price__amt">S/1,590</div><div class="price__per">40 clases · S/39.75 c/u</div><div class="price__meta">Vigencia 6 meses · mejor precio</div><ul><li>Para alumnas comprometidas</li></ul><a class="btn btn--out" href="https://wa.me/51981835198" target="_blank" rel="noopener"><span>Comprar</span></a></div>
+      </div>
+      <p class="muted reveal" style="margin-top:1.6rem;font-size:.82rem">Precios referenciales en soles (S/). Consúltanos por promociones de temporada y planes corporativos.</p>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="section section--solid">
+    <div class="container">
+      <div class="shead"><div><span class="eyebrow">Lo que dicen</span><h2 class="h-xl reveal" style="margin-top:1.2rem">Historias <span class="outline-text">reales</span></h2></div></div>
+      <div class="grid reveal" style="grid-template-columns:repeat(3,1fr)">
+        <div class="quote"><div class="quote__stars">★★★★★</div><p>"En tres meses mi postura cambió por completo y el dolor de espalda desapareció. Las clases son chicas, te corrigen todo."</p><div class="quote__by"><span class="quote__av">M</span><div><b>María Fernanda</b><span>Sede Miraflores</span></div></div></div>
+        <div class="quote"><div class="quote__stars">★★★★★</div><p>"El mejor estudio de Pilates en Lima. Las instructoras son un amor y el espacio impecable. Voy 3 veces por semana."</p><div class="quote__by"><span class="quote__av">D</span><div><b>Daniela S.</b><span>Sede Surco</span></div></div></div>
+        <div class="quote"><div class="quote__stars">★★★★★</div><p>"Probé Barre por curiosidad y me enganché. Salgo con energía y de muy buen humor. 100% recomendado."</p><div class="quote__by"><span class="quote__av">R</span><div><b>Rocío V.</b><span>Sede Miraflores</span></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIMEROS PASOS -->
+  <section class="section section--solid" id="empezar">
+    <div class="container">
+      <div class="shead"><div><span class="eyebrow">Cómo empezar</span><h2 class="h-xl reveal" style="margin-top:1.2rem">Tu primera clase,<br>en 3 <span class="outline-text">pasos</span></h2></div><p class="lead reveal">Sin complicaciones. En menos de un minuto estás dentro.</p></div>
+      <div class="steps reveal">
+        <div class="step"><div class="step__n">01</div><h4>Escríbenos</h4><p>Mándanos un WhatsApp y elige sede, disciplina y horario que te acomode.</p></div>
+        <div class="step"><div class="step__n">02</div><h4>Reserva tu cupo</h4><p>Confirmamos disponibilidad al instante y aseguramos tu lugar en el grupo.</p></div>
+        <div class="step"><div class="step__n">03</div><h4>Ven a entrenar</h4><p>Llega 10 min antes, te recibimos y te guiamos paso a paso. Solo trae ganas.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--solid" id="faq">
+    <div class="container" style="display:grid;grid-template-columns:1fr 1.3fr;gap:4rem">
+      <div>
+        <span class="eyebrow">Preguntas frecuentes</span>
+        <h2 class="h-xl reveal" style="margin:1.2rem 0 1.6rem">Tus dudas,<br><span class="outline-text">resueltas</span></h2>
+        <p class="lead reveal">¿No encuentras tu pregunta? Escríbenos por WhatsApp y te respondemos al toque.</p>
+        <a href="https://wa.me/51981835198" target="_blank" rel="noopener" class="btn btn--wa" style="margin-top:1.6rem"><span>Escribir por WhatsApp</span></a>
+      </div>
+      <div class="reveal">
+        <div class="faq"><button class="faq__q">¿Necesito experiencia previa?<span class="faq__ic">+</span></button><div class="faq__a"><p>Para nada. Las clases se adaptan a todos los niveles y en tu primera sesión la instructora te guía paso a paso.</p></div></div>
+        <div class="faq"><button class="faq__q">¿Qué debo llevar?<span class="faq__ic">+</span></button><div class="faq__a"><p>Ropa cómoda y medias antideslizantes (las vendemos en el estudio). Nosotros ponemos el equipo y el agua.</p></div></div>
+        <div class="faq"><button class="faq__q">¿Cómo reservo mi clase?<span class="faq__ic">+</span></button><div class="faq__a"><p>Por WhatsApp en segundos o desde la app FITCO (Android/iPhone). Te confirmamos disponibilidad al instante.</p></div></div>
+        <div class="faq"><button class="faq__q">¿Los paquetes vencen?<span class="faq__ic">+</span></button><div class="faq__a"><p>Sí, cada paquete tiene vigencia (ej.: 10 clases = 2 meses). Consulta opciones de congelamiento por viaje o salud.</p></div></div>
+        <div class="faq"><button class="faq__q">¿Sirve en ambas sedes?<span class="faq__ic">+</span></button><div class="faq__a"><p>¡Claro! Tu paquete es válido en Miraflores y Surco según disponibilidad de horarios.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <canvas id="cta-canvas" aria-hidden="true"></canvas>
+    <div class="container">
+      <span class="eyebrow" style="justify-content:center">Tu turno</span>
+      <h2 class="display reveal" style="margin:1.5rem 0 2rem">Empieza<br><span class="outline-text">hoy</span></h2>
+      <div class="btn-row" style="justify-content:center">
+        <a href="https://wa.me/51981835198?text=Quiero%20reservar%20mi%20primera%20clase" target="_blank" rel="noopener" class="btn btn--fill btn--lg" data-magnetic><span>Reservar primera clase</span></a>
+        <a href="#sedes" class="btn btn--out btn--lg"><span>Ver sedes</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a href="index.html" class="brand"><img src="logo.png" alt="Funcional Studio" /></a>
+          <p class="muted" style="max-width:30ch">Pilates Reformer, Barre y disciplinas funcionales en Miraflores y Surco. Entrena con intención.</p>
+          <div class="socials">
+            <a href="https://www.instagram.com/funcionalstudio.peru" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="https://www.facebook.com/funcionalstudio.peru" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3l.5-3H14V4.5c0-.8.3-1.5 1.5-1.5H17V.5C16.5.4 15.5.3 14.3.3 11.9.3 10 1.8 10 4.2V6H7v3h3v9h4z"/></svg></a>
+            <a href="https://wa.me/51981835198" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.5 15.3L2 22l4.8-1.5A10 10 0 1012 2z"/></svg></a>
+          </div>
+        </div>
+        <div><h5>Disciplinas</h5><a href="pilates-reformer.html">Pilates Reformer</a><a href="barre.html">Barre</a><a href="step-chair.html">Step Chair</a><a href="suspension-trx.html">Suspensión TRX</a><a href="stretching.html">Stretching</a></div>
+        <div><h5>Sedes</h5><a href="miraflores.html">Miraflores</a><a href="surco.html">Surco</a><a href="#precios">Precios</a><a href="#faq">FAQ</a></div>
+        <div><h5>Contacto</h5><a href="tel:+51981835198">(+51) 981 835 198</a><a href="tel:+51993630152">(+51) 993 630 152</a><a href="https://wa.me/51981835198" target="_blank" rel="noopener">WhatsApp</a><a href="https://www.mireclamo.pe" target="_blank" rel="noopener">Libro de reclamaciones</a></div>
+      </div>
+      <div class="footer__big" aria-hidden="true">FUNCIONAL STUDIO</div>
+      <div class="footer__bottom"><span>© <span data-year>2026</span> Funcional Studio. Todos los derechos reservados.</span><span><a class="credit" href="https://andresbotta.dev" target="_blank" rel="noopener">Desarrollado por Andrés Botta Dev</a></span></div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/51981835198?text=Hola!%20Quiero%20info%20de%20Funcional%20Studio" class="fab" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.5 15.3L2 22l4.8-1.5A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-2.8.9.9-2.8-.2-.3A8 8 0 1112 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 01-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3.2-.5 0-.1 0-.3-.1-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.4c.1.2 1.7 2.6 4.1 3.6 1.5.6 2 .7 2.7.6.4-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1z"/></svg>
+  </a>
+
+  <button class="to-top" aria-label="Volver arriba" title="Volver arriba">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M6 11l6-6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

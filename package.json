@@ -1,0 +1,21 @@
+{
+  "name": "funcional-studio",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "description": "Funcional Studio — sitio inmersivo con experiencia 3D (Pilates Reformer & Barre, Lima)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.10"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5",
+    "lenis": "^1.1.13",
+    "simplex-noise": "^4.0.3",
+    "three": "^0.169.0"
+  }
+}
