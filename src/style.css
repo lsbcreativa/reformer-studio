@@ -375,6 +375,20 @@ html.theming, html.theming * { transition: background-color .6s ease, color .6s 
 ::view-transition-new(root) { z-index: 99999; }
 ::view-transition-old(root) { z-index: 1; }
 
+/* Credencial de prototipo (fija, discreta) */
+.proto-badge {
+  position: fixed; bottom: 26px; left: 50%; transform: translateX(-50%); z-index: 95;
+  display: inline-flex; align-items: center; gap: .45rem; white-space: nowrap;
+  padding: .5rem 1rem; border-radius: 100px;
+  font-size: .72rem; font-weight: 600; letter-spacing: .03em;
+  background: rgba(18,18,22,.72); color: var(--mute); border: 1px solid var(--line);
+  backdrop-filter: blur(10px); transition: opacity .3s, color .3s, border-color .3s; opacity: .8;
+}
+[data-theme="light"] .proto-badge { background: rgba(255,255,255,.8); }
+.proto-badge:hover { opacity: 1; border-color: var(--white); }
+.proto-badge b { font-weight: 800; color: transparent; background: var(--grad-accent); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+@media (max-width: 600px) { .proto-badge { display: none; } }
+
 /* Botón "volver arriba" */
 .to-top {
   position: fixed; bottom: 24px; left: 24px; z-index: 90;
