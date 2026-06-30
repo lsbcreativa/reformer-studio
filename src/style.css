@@ -325,7 +325,10 @@ body.menu-open .overlay { transform: translateY(0); }
 .socials a { width: 44px; height:44px; border: 1px solid var(--line); border-radius: 50%; display:grid; place-items:center; padding:0; transition: .3s; }
 .socials a:hover { background: var(--white); color: var(--black); }
 .socials svg { width: 18px; height:18px; }
-.footer__bottom { margin-top: 3rem; padding-top: 1.6rem; border-top: 1px solid var(--line-2); display:flex; justify-content: space-between; gap:1rem; flex-wrap:wrap; font-size: .8rem; color: var(--mute-2); }
+.footer__note { max-width: 72ch; margin: 2.6rem auto 0; padding: 1.1rem 1.4rem; border: 1px solid var(--line); border-radius: 14px; font-size: .8rem; line-height: 1.65; color: var(--mute); text-align: center; background: rgba(255,255,255,.02); }
+.footer__note b { color: var(--white); font-weight: 700; }
+.footer__note a { font-weight: 700; color: transparent; background: var(--grad-accent); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.footer__bottom { margin-top: 1.6rem; padding-top: 1.6rem; border-top: 1px solid var(--line-2); display:flex; justify-content: space-between; gap:1rem; flex-wrap:wrap; font-size: .8rem; color: var(--mute-2); }
 .footer__bottom a.credit { color: var(--mute); font-weight: 500; transition: color .3s; }
 .footer__bottom a.credit:hover { color: transparent; background: var(--grad-accent); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
 .footer .container { container-type: inline-size; }
