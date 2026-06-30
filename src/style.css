@@ -390,7 +390,7 @@ html.theming, html.theming * { transition: background-color .6s ease, color .6s 
 [data-theme="light"] .proto-badge { background: rgba(255,255,255,.8); }
 .proto-badge:hover { opacity: 1; border-color: var(--white); }
 .proto-badge b { font-weight: 800; color: transparent; background: var(--grad-accent); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
-@media (max-width: 600px) { .proto-badge { display: none; } }
+@media (max-width: 600px) { .proto-badge { bottom: 16px; font-size: .64rem; padding: .4rem .8rem; gap: .35rem; opacity: .92; } }
 
 /* Botón "volver arriba" */
 .to-top {

@@ -9,8 +9,9 @@ import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment
 export function initScene(canvas) {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, powerPreference: 'high-performance' });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, window.innerWidth < 768 ? 1.5 : 2));
+  const isSmall = window.innerWidth < 768;
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: !isSmall, alpha: true, powerPreference: 'high-performance' });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, isSmall ? 1 : 2));
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   renderer.toneMappingExposure = 1.3;
 
@@ -28,7 +29,10 @@ export function initScene(canvas) {
   scene.add(new THREE.AmbientLight(0xffffff, 0.15));
 
   // ---------- Material cromo ----------
-  const chrome = new THREE.MeshPhysicalMaterial({ color: 0x16161a, metalness: 1, roughness: 0.17, clearcoat: 1, clearcoatRoughness: 0.14, envMapIntensity: 1.75 });
+  // En móvil usamos un material más barato (sin clearcoat) → mucho menos costo de GPU
+  const chrome = isSmall
+    ? new THREE.MeshStandardMaterial({ color: 0x16161a, metalness: 1, roughness: 0.22, envMapIntensity: 1.6 })
+    : new THREE.MeshPhysicalMaterial({ color: 0x16161a, metalness: 1, roughness: 0.17, clearcoat: 1, clearcoatRoughness: 0.14, envMapIntensity: 1.75 });
   const matte = new THREE.MeshStandardMaterial({ color: 0x202024, metalness: 0.5, roughness: 0.55, envMapIntensity: 0.8 });
 
   // ---------- Reformer ----------
@@ -94,7 +98,7 @@ export function initScene(canvas) {
   scene.add(reformer);
 
   // ---------- Partículas sutiles ----------
-  const PCOUNT = window.innerWidth < 768 ? 200 : 380;
+  const PCOUNT = isSmall ? 90 : 380;
   const pPos = new Float32Array(PCOUNT * 3);
   for (let i = 0; i < PCOUNT; i++) {
     const r = 4 + Math.random() * 4, t = Math.random() * Math.PI * 2, p = Math.acos(2 * Math.random() - 1);
@@ -160,9 +164,10 @@ export function initScene(canvas) {
 // =============================================================
 export function initRing(canvas) {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isSmall = window.innerWidth < 768;
 
-  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, powerPreference: 'high-performance' });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, window.innerWidth < 768 ? 1.5 : 2));
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: !isSmall, alpha: true, powerPreference: 'high-performance' });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, isSmall ? 1 : 2));
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   renderer.toneMappingExposure = 1.3;
 
@@ -178,7 +183,9 @@ export function initRing(canvas) {
   const rRim = new THREE.DirectionalLight(0xffffff, 1.3); rRim.position.set(-5, -2, -3); scene.add(rRim);
   scene.add(new THREE.AmbientLight(0xffffff, 0.15));
 
-  const chrome = new THREE.MeshPhysicalMaterial({ color: 0x17171b, metalness: 1, roughness: 0.15, clearcoat: 1, clearcoatRoughness: 0.13, envMapIntensity: 1.8 });
+  const chrome = isSmall
+    ? new THREE.MeshStandardMaterial({ color: 0x17171b, metalness: 1, roughness: 0.2, envMapIntensity: 1.7 })
+    : new THREE.MeshPhysicalMaterial({ color: 0x17171b, metalness: 1, roughness: 0.15, clearcoat: 1, clearcoatRoughness: 0.13, envMapIntensity: 1.8 });
   const grip = new THREE.MeshStandardMaterial({ color: 0x1d1d22, metalness: 0.45, roughness: 0.6, envMapIntensity: 0.9 });
 
   const ring = new THREE.Group();

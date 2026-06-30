@@ -73,7 +73,7 @@ const isTouch = window.matchMedia('(pointer: coarse)').matches || navigator.maxT
 const useSmooth = !reduceMotion && !isTouch;
 let lenis = null;
 if (useSmooth) {
-  lenis = new Lenis({ lerp: 0.12, smoothWheel: true });
+  lenis = new Lenis({ lerp: 0.18, smoothWheel: true });
   lenis.on('scroll', (e) => {
     ScrollTrigger.update();
     if (scene3d) scene3d.setScroll(e.scroll / (e.limit || 1));
